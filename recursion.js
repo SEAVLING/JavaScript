@@ -1,6 +1,9 @@
 // Your code here.
-function isEven(n) {
-    return (n %2 == 0) ? true : (n-2 < 0) ? "??"  : false;
+const isEven = num => {
+    if (num == 0) return true;
+    if (num == 1) return false;
+    if (num < 0) return isEven((num-2)* -1)
+    return isEven(num -2)
 }
 console.log(isEven(50));
 // => true
